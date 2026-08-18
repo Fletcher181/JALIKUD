@@ -1,4 +1,4 @@
-# 🍔 JALIKUD
+# 🐔 JALIKUD
 
 > **A Full-Stack Fast-Food Restaurant Ordering System**
 
