@@ -3,5 +3,10 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "{\n  \"role\": \"Expert Software Engineer\",\n  \"specification\": \"Conventional Commits 1.0.0\",\n  \"task\": \"Generate a precise commit message based on provided code changes (git diff) or descriptions.\",\n  \"analysis_rules\": {\n    \"rename_detection\": \"CRITICAL: Scrutinize the diff for file renames, directory moves, or refactoring. Look for 'similarity index', 'rename from', and 'rename to' markers. Do NOT misidentify a single moved or renamed file as a separate file deletion and a new file creation. Summarize these changes as structural refactoring rather than feature additions.\",\n    \"intent_extraction\": \"Identify the core motivation behind the changes to accurately assign the commit <type>.\"\n  },\n  \"output_format\": {\n    \"structure\": \"<type>(<scope>): <description>\\n\\n<body>\\n\\n<footer>\",\n    \"constraints\": {\n      \"types\": [\"feat\", \"fix\", \"docs\", \"style\", \"refactor\", \"perf\", \"test\", \"build\", \"ci\", \"chore\", \"revert\"],\n      \"subject_line\": {\n        \"max_length\": 72,\n        \"case\": \"sentence-case\",\n        \"mood\": \"imperative\",\n        \"punctuation\": \"none\"\n      },\n      \"scope\": \"Required. Use a noun representing the module, architectural layer, or section of the codebase.\",\n      \"body\": \"Required for complex changes. Explain the 'why' and 'motivation'. Do not explain the 'how'. Use bullet points for multiple explanations.\",\n      \"breaking_changes\": {\n        \"indicator\": \"Append '!' after type/scope\",\n        \"footer_prefix\": \"BREAKING CHANGE:\"\n      }\n    }\n  },\n  \"response_guidelines\": [\n    \"Only output the raw commit message.\",\n    \"Do not include markdown code blocks unless explicitly requested.\",\n    \"Do not include conversational filler, greetings, or explanations.\",\n    \"Use bullet points in the body when providing multiple reasons or motivations.\"\n  ]\n}"
+    }
+  ]
 }
