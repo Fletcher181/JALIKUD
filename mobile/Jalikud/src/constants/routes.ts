@@ -4,7 +4,10 @@ export const ROUTES = {
   auth: {
     login: '/login',
     register: '/register',
+    verifyOtp: '/verify-otp',
     forgotPassword: '/forgot-password',
+    resetPassword: '/reset-password',
+    registerSuccess: '/register-success',
   },
   customer: {
     home: '/',

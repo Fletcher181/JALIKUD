@@ -51,6 +51,30 @@ export const Fonts = Platform.select({
   },
 });
 
+export const BrandColors = {
+  primary: '#E23744',
+  primaryDeep: '#C22733',
+  primarySoft: '#FDECEC',
+  accent: '#FFC531',
+  accentDeep: '#F0A500',
+  accentSoft: '#FFF4D6',
+  ink: '#20242B',
+  muted: '#69707D',
+  border: '#E6E8EC',
+  surface: '#FFFFFF',
+  backdrop: '#F7F7F9',
+  danger: '#D92D20',
+  dangerSoft: '#FDECEB',
+  success: '#12813E',
+  successSoft: '#E8F6EC',
+} as const;
+
+export const Radius = {
+  field: 14,
+  button: 16,
+  card: 20,
+} as const;
+
 export const Spacing = {
   half: 2,
   one: 4,
