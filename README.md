@@ -2,4 +2,4 @@
 
 **New Repository Link Below: **
 
-github.com/Jiwonieee19/JALIKUD
+https://github.com/Jiwonieee19/JALIKUD
